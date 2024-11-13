@@ -1,16 +1,12 @@
-let icon=document.querySelector("i")
-let p1=document.querySelector("p")
+let input = document.getElementById("input1")
+let icon = document.getElementById("ic")
+icon.onclick = function () {
+    if (input.type === "password") {
+        input.type = "text"
+        icon.className="fa-solid fa-eye"
 
- icon.onclick=function (){
-    if(icon.className ==="fa-solid fa-toggle-on"){
-        icon.className ="fa-solid fa-toggle-off"
-        document.body.style.backgroundColor="green"
-        document.body.style.color="white"
     }else{
-        icon.className="fa-solid fa-toggle-on"
-        document.body.style.backgroundColor="white"
-        document.body.style.color="black"
+        input.type="password"
+        icon.className="fa-solid fa-eye-slash"
     }
-       
-    
 }
